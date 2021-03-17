@@ -1,0 +1,10 @@
+site_name: napari-mri
+site_description: A simple plugin to use with napari for 3D-viewing of Magnetic Resonance Imaging file formats
+site_author: SUSMITA SAHA
+
+theme: readthedocs
+
+repo_url: https://github.com/sahas111/napari-mri
+
+pages:
+- Home: index.md
