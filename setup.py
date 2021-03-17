@@ -19,6 +19,24 @@ with open('requirements.txt') as f:
             requirements.append(stripped)
 # https://github.com/pypa/setuptools_scm
 use_scm = {"write_to": "napari_mri/_version.py"}
+setup_requirements = [
+    "pytest-runner>=5.2", "setuptools_scm"
+
+]
+
+test_requirements = [
+    "codecov>=2.1.4",
+    "flake8>=3.8.3",
+    "flake8-debugger>=3.2.1",
+    "pytest>=5.4.3",
+    "pytest-cov>=2.9.0",
+    "pytest-raises>=0.11",
+]
+
+extra_requirements = {
+    "setup": setup_requirements,
+    "test": test_requirements,
+}
 
 setup(
     name='napari-mri',
@@ -30,8 +48,11 @@ setup(
     long_description_content_type='text/markdown',
     python_requires='>=3.7',
     install_requires=["napari_plugin_engine>=0.1.4", "nibabel", "numpy"],
-    setup_requires=['setuptools_scm'],
+    setup_requires=setup_requirements,
     use_scm_version=use_scm,
+    test_suite="napari_mri/tests",
+    tests_require=test_requirements,
+    extras_require=extra_requirements,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
