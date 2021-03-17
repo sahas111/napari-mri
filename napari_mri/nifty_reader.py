@@ -38,6 +38,3 @@ def MRI_reader(path):
         "metadata": metadata,
     }
     return [(data, params)]
-
-
-
