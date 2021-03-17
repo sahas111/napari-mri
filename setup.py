@@ -10,6 +10,7 @@ def read(fname):
     file_path = os.path.join(os.path.dirname(__file__), fname)
     return codecs.open(file_path, encoding='utf-8').read()
 
+
 requirements = []
 with open('requirements.txt') as f:
     for line in f:
@@ -23,11 +24,12 @@ setup(
     name='napari-mri',
     author='SUSMITA SAHA',
     author_email='susmi06@yahoo.com',
-    description='A simple plugin to use with napari for 3D-viewing of Magnetic Resonance Imaging file formats',
+    description='A simple plugin to use with napari for 3D-viewing of \
+                 Magnetic Resonance Imaging file formats',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     python_requires='>=3.7',
-    install_requires=["napari_plugin_engine>=0.1.4","nibabel", "numpy"],
+    install_requires=["napari_plugin_engine>=0.1.4", "nibabel", "numpy"],
     setup_requires=['setuptools_scm'],
     use_scm_version=use_scm,
     classifiers=[
