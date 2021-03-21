@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from napari_mri.nifty_reader import napari_get_reader
-import pytest
 
 def test_get_reader_hit():
     reader = napari_get_reader('fake.nii.gz')

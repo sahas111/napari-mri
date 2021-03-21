@@ -15,7 +15,6 @@ def napari_get_reader(path):
         return None
     return MRI_reader
 
-
 def MRI_reader(path):
     """Given a single path, returns a tuple [(data, metadata)]"""
     import numpy as np
