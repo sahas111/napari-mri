@@ -8,7 +8,6 @@ from napari_plugin_engine import napari_hook_implementation
 
 @napari_hook_implementation
 def napari_get_reader(path):
-
     if isinstance(path, list):
         path = path[0]
     if not path.endswith(".nii.gz"):
