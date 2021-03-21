@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from napari_mri.nifty_reader import napari_get_reader
 
 
